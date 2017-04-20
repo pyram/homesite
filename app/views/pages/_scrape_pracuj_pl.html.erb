@@ -1,0 +1,15 @@
+<!-- <h1>Reddit's Front Page</h1> -->
+<% @entriesArray.each do |entry| %>
+  <!-- <p><%=   raw entry.title  %></p>
+  <p><%= entry.link %></p> -->
+<p class="job-posting">
+  <!-- , style: 'white-space: normal;' -->
+<%= link_to entry.title, entry.link, target: :_blank, class: "btn btn-default btn-lg" %>
+<br />  <% entry.locations.each do |loc| %>
+    <!-- <p><%=   raw entry.title  %></p>
+    <p><%= entry.link %></p> -->
+    <%= link_to loc.title, loc.link, target: :_blank, class: "btn btn-default btn-sm" %>
+  <% end %>
+
+</p>
+<% end %>
